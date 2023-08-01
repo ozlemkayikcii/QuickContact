@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Excel to VCF Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333333;
+        }
+
+        p {
+            color: #666666;
+            margin-bottom: 20px;
+        }
+
+        .file-upload {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: 2px dashed #aaaaaa;
+            border-radius: 5px;
+            text-align: center;
+            color: #aaaaaa;
+            cursor: pointer;
+        }
+
+        .file-upload input[type="file"] {
+            display: none;
+        }
+
+        .convert-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #1e90ff;
+            color: #ffffff;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .convert-btn:hover {
+            background-color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Excel to VCF Converter</h1>
+        <p>Select an Excel file with the extension .xlsx to convert it to VCF format.</p>
+        <form action="/convert" method="post" enctype="multipart/form-data">
+            <label for="file-upload" class="file-upload">
+                <input type="file" name="file" id="file-upload" accept=".xlsx" required>
+                Choose File
+            </label>
+            <button type="submit" class="convert-btn">Convert to VCF</button>
+        </form>
+    </div>
+</body>
+</html>
